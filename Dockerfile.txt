@@ -3,10 +3,7 @@ from python:3.7
 COPY ./requirements.txt /app/requirements.txt
 COPY . /app
 WORKDIR /app
-
 RUN pip install -r requirements.txt
 RUN pip install Flask gunicorn
-
-ENTRYPOINT [ "Python", "app.py" ]
-
-CMD flask run -h 0.0.0.0 -p 5000
+EXPOSE 8080
+ENTRYPOINT [ "Python", "run", app.py", "--server.port=8080", "--server.address=0.0.0.0" ]
