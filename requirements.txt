@@ -1,0 +1,10 @@
+click
+Flask
+pandas
+Jinja2
+numpy
+scipy
+Werkzeug
+sklearn
+seaborn
+pyplt
